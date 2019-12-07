@@ -66,3 +66,4 @@ if showPriceList:
 
 f.close()
 del coinPrice
+
