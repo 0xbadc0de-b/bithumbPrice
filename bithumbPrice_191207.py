@@ -36,6 +36,7 @@ f.write(nowPrice+"\n")
 f.close()
 
 if int(coinPrice[0]) >= maxBTC or int(coinPrice[0]) <= minBTC or int(coinPrice[1]) >= maxETH or int(coinPrice[1]) <= minETH or int(coinPrice[2]) >= maxEOS or int(coinPrice[2]) <= minEOS or int(coinPrice[3]) >= maxXRP or int(coinPrice[3]) <= minXRP:
+	# execute third-party program without cmd shell
 	ctypes.windll.shell32.ShellExecuteA(0, 'open', 'D:\\CodeTest\\bithumbPrice\\bithumb_coin_price.log', None, None, 1)
 
 del coinPrice
