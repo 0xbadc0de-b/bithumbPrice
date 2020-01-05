@@ -12,14 +12,14 @@ def sendMail():
 	from email.MIMEText import MIMEText
 	import os
 
-	user = 'woojookim21c@gmail.com'
-	pswd = '1qaz2wsx#$'
-	text = 'Good Game'
+	user = ''	# email address
+	pswd = ''	# email password
+	text = ''	# message
 
 	msg = MIMEMultipart()
 	msg['From'] = user
-	msg['To'] = 'msbang82@gmail.com'
-	msg['Subject'] = 'Hurry up'
+	msg['To'] = ''		# receive mail address
+	msg['Subject'] = ''	# mail title
 	msg.attach(MIMEText(text))
 
 	mailServer = smtplib.SMTP("smtp.gmail.com", 587)
@@ -27,7 +27,7 @@ def sendMail():
 	mailServer.starttls()
 	mailServer.ehlo()
 	mailServer.login(user, pswd)
-	mailServer.sendmail(user, 'msbang82@gmail.com', msg.as_string())
+	mailServer.sendmail(user, 'send email address', msg.as_string())
 	mailServer.close()
 
 
